@@ -1,0 +1,95 @@
+body{
+    margin: 0;
+}
+
+header{
+    background-color: rgb(69, 69, 69);
+    color: white;
+    padding: 0 4vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+#header-information{
+    display: flex;
+    flex-direction: row;
+    gap: 8vw;
+}
+
+.slideshow-container{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+}
+
+#gameChange{
+    width: 100%;
+    height: 100%;
+}
+
+#gameChange img{
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+    mask-image: linear-gradient(to right, transparent, black 50%,  black 50%, transparent);
+}
+
+.arrows{
+    position: absolute;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.arrow{
+    color: white;
+    z-index: 1;
+}
+
+.arrow:hover{
+    cursor:pointer;
+}
+
+
+
+main{
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-games{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: auto;
+}
+
+.game{
+    background-color: black;
+    height: 45vh;
+    width: 30vw;
+    color: white;
+    margin: 2vh 5vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1%;
+}
+
+.game img{
+    width: 100%;
+    height: 85%;
+    object-fit: cover;
+    mask-image: linear-gradient(to top, transparent 0%, black 100%);
+}
+
+.game cite{
+    margin-bottom: 2.5vh;
+}

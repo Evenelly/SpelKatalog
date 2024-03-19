@@ -1,7 +1,27 @@
-function slideShow(argId){
-    var image = document.getElementsById(game-image)
+let slideIndex = 0;
+showSlides(slideIndex);
 
-    if(argId == "right"){
-        image.setAttribute("src", "https://static.vecteezy.com/ti/gratis-vektor/p3/6409900-tic-tac-toe-skissad-isolerad-vintage-spel-i-handritad-stil-vector.jpg")
-    }
+function navSlides(n){
+    slideIndex += n;
+    showSlides();
 }
+
+function showSlides() {
+    let slides = document.getElementsByClassName("slideShowImage");
+    let text = document.getElementsByClassName("slideShowText")
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+        text[i].style.display="none";
+    } 
+
+    if(slideIndex > slides.length - 1){
+        slideIndex = 0;
+    }
+
+    slides[slideIndex].style.display = "block"; 
+    text[slideIndex].style.display = "block";
+}
+
+
+

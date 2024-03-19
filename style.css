@@ -2,6 +2,15 @@ body{
     margin: 0;
 }
 
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+cite{
+    font-style: normal;
+}
+
 header{
     background-color: rgb(69, 69, 69);
     color: white;
@@ -25,12 +34,9 @@ header{
     height: 80vh;
 }
 
-#gameChange{
-    width: 100%;
-    height: 100%;
-}
 
-#gameChange img{
+
+.slideshow-container img{
     width: 90%;
     height: 100%;
     object-fit: cover;
@@ -42,20 +48,36 @@ header{
     width: 90%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    font-size: 70px;
 }
 
 .arrow{
     color: white;
-    z-index: 1;
 }
 
 .arrow:hover{
     cursor:pointer;
 }
 
+.fade{
+    animation: fade;
+    animation-duration: 1s;
+}
+
+@keyframes fade { /*kolla upp*/
+    from {opacity: .5}
+    to {opacity: 1}
+}
 
 
-main{
+
+
+
+#index-main{
     margin-top: 5vh;
     display: flex;
     align-items: center;
@@ -69,12 +91,12 @@ main{
     width: auto;
 }
 
-.game{
+.game a{
     background-color: black;
     height: 45vh;
     width: 30vw;
     color: white;
-    margin: 2vh 5vw;
+    margin: 7vh 5vw;
 
     display: flex;
     flex-direction: column;
@@ -93,3 +115,69 @@ main{
 .game cite{
     margin-bottom: 2.5vh;
 }
+
+
+footer{
+    margin-top: 10vh;
+    width: 100%;
+    height: 30vh;
+    background-color: grey;
+}
+
+
+
+
+
+
+#pro-syfte{
+    display: flex;
+    flex-direction: row;
+}
+
+#omoss-image{
+    width: 100%;
+    mask-image: linear-gradient(to left, transparent 20%, black 100%);
+}
+
+.text{
+    margin: 2vh 2vw;
+}
+
+
+
+
+.profile-information{
+    width: 100%;
+    padding: 7vh 15vw;
+    background-color: rgba(197, 196, 205, 0.983);
+    box-sizing: border-box;
+}
+
+.profile-interaction{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8vh 15vw;
+}
+
+.interactive-write{
+    width: 100%;
+    height: 5vh;
+}
+
+#input-beskrivning{
+    padding-bottom: 10vh;
+}
+
+h4{
+    margin: 4vh 0vw 2vh;
+}
+
+.profile-buttons{
+    display: flex;
+    justify-content: end;
+}
+
+.profile-button{
+    margin: 2vh 0vw 1vh 2vw  
+}
+
